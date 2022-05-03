@@ -16,6 +16,8 @@ try {
     exit();
 }
 
+print_r(result["device_name"]);
+
 // mysqlに保存されているdevice_id一覧を取得
 $sql = "SELECT * FROM device_info";
 $sth = $dbh -> query($sql);
@@ -54,7 +56,7 @@ $check = $sth -> execute();
 
 if ($check){
 	print("sqlは成功\n");
-    header('Location: http://192.168.2.117/index.html');
+    // header('Location: http://192.168.2.117/index.html');
 } else {
 	print("sqlは失敗しました\n");
 }
