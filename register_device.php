@@ -32,8 +32,26 @@ while(true){
     }
 }
 
-echo "dbにdevice_nameとdevice_idを保存する";
-// mysqlにdevice_nameとdevice_idを保存する
-// 保存が成功した場合と失敗した場合で返却する画面を変化させる
+
+//切断を閉じる
+$sql = null;
+$sth = null;
+
+$sql = "INSERT INTO device_info(device_id, device_name) VALUES (:device_id, :device_name)";
+
+$sth = $dbh -> prepare($sql);
+$sth -> bindValue(':device_id', $device_id);
+$sth -> bindValue(':device_name', $device_name);
+$check = $sth -> execute();
+
+if ($check){
+	print("sqlは成功\n");
+} else {
+	print("sqlは失敗\n");
+}
+
+//切断を閉じる
+$sth = null;
+$dbh = null;
 
 ?>
