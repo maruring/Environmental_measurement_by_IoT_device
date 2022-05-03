@@ -21,10 +21,18 @@ $sql = "SELECT device_id FROM device_info";
 $sth = $dbh -> query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($result);
+while(true){
+    $device_id = rand(100000, 999999);
 
+    if(in_array($device_id, $result)){
+        echo "device_idが被っています。再度、device_idを取得します";
+    } else {
+        echo $device_id;
+        break;
+    }
+}
 
-// 既存のdevice_idと被らないdevice_idをつける
+echo "dbにdevice_nameとdevice_idを保存する";
 // mysqlにdevice_nameとdevice_idを保存する
 // 保存が成功した場合と失敗した場合で返却する画面を変化させる
 
