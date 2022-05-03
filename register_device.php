@@ -21,11 +21,13 @@ $sql = "SELECT device_id FROM device_info";
 $sth = $dbh -> query($sql);
 $result = $sth->fetch(PDO::FETCH_ASSOC);
 
-print_r($result);
+foreach ($result as $row) {
+    var_dump($row);
+}
+
 
 // 既存のdevice_idと被らないdevice_idをつける
 // mysqlにdevice_nameとdevice_idを保存する
 // 保存が成功した場合と失敗した場合で返却する画面を変化させる
-$device_id = rand(100000, 999999)
 
 ?>
