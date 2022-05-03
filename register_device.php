@@ -17,14 +17,21 @@ try {
 }
 
 // mysqlに保存されているdevice_id一覧を取得
-$sql = "SELECT device_id FROM device_info";
+$sql = "SELECT * FROM device_info";
 $sth = $dbh -> query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 while(true){
     $device_id = rand(100000, 999999);
 
-    if(in_array($device_id, $result)){
+    if(in_array($device_name, $result["device_name"])){
+        // register_page.htmlにリダイレクトして、device_nameが被っていることを通知する
+        header('Location: http://192.168.2.117/register_page.html')
+    } else {
+        echo "device_nameにかぶりはありません"
+    }
+
+    if(in_array($device_id, $result["device_id"])){
         echo "device_idが被っています。再度、device_idを取得します";
     } else {
         echo $device_id;
@@ -46,8 +53,9 @@ $check = $sth -> execute();
 
 if ($check){
 	print("sqlは成功\n");
+    header('Location: http://192.168.2.117/index.html')
 } else {
-	print("sqlは失敗\n");
+	print("sqlは失敗しました\n");
 }
 
 //切断を閉じる
