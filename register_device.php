@@ -26,9 +26,9 @@ while(true){
 
     if(in_array($device_name, $result["device_name"])){
         // register_page.htmlにリダイレクトして、device_nameが被っていることを通知する
-        header('Location: http://192.168.2.117/register_page.html')
+        header('Location: http://192.168.2.117/register_page.html');
     } else {
-        echo "device_nameにかぶりはありません"
+        echo "device_nameにかぶりはありません";
     }
 
     if(in_array($device_id, $result["device_id"])){
@@ -53,7 +53,7 @@ $check = $sth -> execute();
 
 if ($check){
 	print("sqlは成功\n");
-    header('Location: http://192.168.2.117/index.html')
+    header('Location: http://192.168.2.117/index.html');
 } else {
 	print("sqlは失敗しました\n");
 }
