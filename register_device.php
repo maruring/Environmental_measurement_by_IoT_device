@@ -22,12 +22,11 @@ $sql = "SELECT * FROM device_info";
 $sth = $dbh -> query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($result);
 
 while(true){
     $device_id = rand(100000, 999999);
 
-    if(in_array($device_name, $result["device_name"])){
+    if(in_array($device_name, array_column($result, "device_name"))){
         // register_page.htmlにリダイレクトして、device_nameが被っていることを通知する
         header('Location: http://192.168.2.117/register_page.html');
         exit;
@@ -35,7 +34,7 @@ while(true){
         echo "device_nameにかぶりはありません";
     }
 
-    if(in_array($device_id, $result["device_id"])){
+    if(in_array($device_id, array_column($result, "device_id"))){
         echo "device_idが被っています。再度、device_idを取得します";
     } else {
         echo $device_id;
