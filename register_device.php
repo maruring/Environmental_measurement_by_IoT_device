@@ -22,7 +22,7 @@ $sql = "SELECT * FROM device_info";
 $sth = $dbh -> query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($result["device_name"]);
+print_r($result);
 
 while(true){
     $device_id = rand(100000, 999999);
