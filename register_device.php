@@ -7,8 +7,6 @@ $password = 'maruring';
 
 $device_name = $_POST['device_name'];
 
-echo $device_name;
-
 //データベースと接続
 try {
     $dbh = new PDO($dsn, $user, $password);
@@ -20,8 +18,10 @@ try {
 
 // mysqlに保存されているdevice_id一覧を取得
 $sql = "SELECT device_id FROM device_info";
-while ($row = mysql_fetch_assoc($sql)) {
-    print($row['device_id']);
+$sth = $dbh -> query($sql);
+
+while($result = $sth->fetch(PDO::FETCH_ASSOC)){
+    print($result['device_id']);
 }
 
 // 既存のdevice_idと被らないdevice_idをつける
