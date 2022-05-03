@@ -27,6 +27,7 @@ while(true){
     if(in_array($device_name, $result["device_name"])){
         // register_page.htmlにリダイレクトして、device_nameが被っていることを通知する
         header('Location: http://192.168.2.117/register_page.html');
+        exit;
     } else {
         echo "device_nameにかぶりはありません";
     }
