@@ -21,8 +21,10 @@ $sql = "SELECT device_id FROM device_info";
 $sth = $dbh -> query($sql);
 
 while($result = $sth->fetch(PDO::FETCH_ASSOC)){
-    print($result['device_id']);
+    print($result);
 }
+
+print($result)
 
 // 既存のdevice_idと被らないdevice_idをつける
 // mysqlにdevice_nameとdevice_idを保存する
