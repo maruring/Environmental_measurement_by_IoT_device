@@ -19,9 +19,9 @@ try {
 // mysqlに保存されているdevice_id一覧を取得
 $sql = "SELECT device_id FROM device_info";
 $sth = $dbh -> query($sql);
-$result = $sth->fetch(PDO::FETCH_ASSOC));
+$result = $sth->fetch(PDO::FETCH_ASSOC);
 
-print($result["device_id"]);
+print($result);
 
 // 既存のdevice_idと被らないdevice_idをつける
 // mysqlにdevice_nameとdevice_idを保存する
