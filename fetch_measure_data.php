@@ -10,7 +10,7 @@ $device_name = $_GET['device_name'];
 //データベースと接続
 try {
     $dbh = new PDO($dsn, $user, $password);
-    echo "DBに接続成功\n";
+    //echo "DBに接続成功\n";
 } catch (PDOException $e) {
     echo "接続失敗: " . $e->getMessage() . "\n";
     exit();
@@ -23,6 +23,8 @@ $sth = $dbh -> prepare($sql);
 $sth -> bindValue(':device_name', $device_name);
 $sth = $dbh -> query($sql);
 $device_id = $sth->fetch(PDO::FETCH_ASSOC);
+
+
 // device_idから測定データを取得
 $sql = null;
 $sth = null;
@@ -33,7 +35,7 @@ $sth -> bindValue(':device_id', $device_id);
 $sth = $dbh -> query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-echo $result;
+print_r($result);
 
 
 //切断を閉じる
