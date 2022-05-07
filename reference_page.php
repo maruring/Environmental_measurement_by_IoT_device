@@ -21,6 +21,7 @@
             } catch (PDOException $e) {
                 echo '接続失敗: ' . $e -> getMessage() . '\n';
                 exit();
+            }
 
             $sql = 'SELECT device_name FROM device_info';
             $sth = $dbh -> query($sql);
