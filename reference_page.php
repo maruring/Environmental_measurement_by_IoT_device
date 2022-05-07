@@ -8,8 +8,7 @@
         <h2>デバイスの名前を参照</h2>
         <form action="fetch_measure_data.php" method="get">
             <label for="device_name">デバイス名を入力</label>
-
-
+            <?php
             //接続するデータベースの設定
             $dsn = 'mysql:dbname=iotdata;host=192.168.2.117';
             $user = 'maru3745';
@@ -37,6 +36,7 @@
             }
             $device_name_list .= '</datalist>\n';
             echo '{$device_name_list}';
+            ?>
 
 
 
