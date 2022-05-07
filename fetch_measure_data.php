@@ -54,34 +54,19 @@
                 $temps = array_column($result, 'temp');
                 $humis = array_column($result, 'humi');
 
-                $kari = array(1,2);
+                $data_table .= "<tr>\n";
+                    $data_table .= "<td>print(htmlspecialchars($datetimes));></td>\n";
+                    $data_table .= "<td>print(htmlspecialchars($lights));></td>\n";
+                    $data_table .= "<td>print(htmlspecialchars($temps));></td>\n";
+                    $data_table .= "<td>print(htmlspecialchars($humis));></td>\n";
+                $data_table .= "</tr>\n";
 
-                //データを表で表示
-                $data_table = "<table>\n";
-                    $data_table .= "<thead>\n";
-                        $data_table .= "<tr>\n";
-                            $data_table .= "<th count( $kari )>データ一覧</th>\n";
-                        $data_table .= "</tr>\n";
-                    $data_table .= "</thead>\n";
-                    $data_table .= "<tbody>\n";
-                        $data_table .= "<tr>\n";
-                            $data_table .= "<td>aa</td>\n";
-                            $data_table .= "<td>bb</td>\n";
-                        $data_table .= "</tr>\n";
-                    $data_table .= "</tbody>\n";
-                $data_table = "</table>\n";
+                echo "{$data_table}";
 
                 //切断を閉じる
                 $sth = null;
                 $dbh = null;
-                ?>
-            <tr>
-                <td><?php print(htmlspecialchars($datetimes)); ?></td>
-                <td><?php print(htmlspecialchars($lights)); ?></td>
-                <td><?php print(htmlspecialchars($temps)); ?></td>
-                <td><?php print(htmlspecialchars($humis)); ?></td>
-            </tr>
-            
+                ?>            
             <a href='index.html'>初期ページ</a>
     </body>
 </html>
