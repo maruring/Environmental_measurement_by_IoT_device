@@ -70,6 +70,8 @@
             $data_table .= "</tbody>\n";
         $data_table = "</table>\n";
 
+        echo "{$data_table}";
+
         //切断を閉じる
         $sth = null;
         $dbh = null;
