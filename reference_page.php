@@ -46,5 +46,3 @@
         <a href='index.html'>初期ページ</a>
     </body>
 </html>
-
-
