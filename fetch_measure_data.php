@@ -11,6 +11,7 @@
             <tr>
                 <th scope="col">時間</th>
                 <th scope="col">照度</th>
+                <th scope="col">音量</th>
                 <th scope="col">気温</th>
                 <th scope="col">湿度</th>
             </tr>
