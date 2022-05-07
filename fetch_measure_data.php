@@ -52,15 +52,18 @@
 
                 $datetimes = array_column($result, 'datetime');
                 $lights = array_column($result, 'light');
+                $volumes = array_column($result, 'volume');
                 $temps = array_column($result, 'temp');
                 $humis = array_column($result, 'humi');
                 
+                $data_table = null;
                 for( $i = 0; $i < count( $datetimes ); $i++ ){
                     $data_table .= "<tr>\n";
-                        $data_table .="<td>$datetimes[$j]</td>\n";
-                        $data_table .="<td>$lights[$j]</td>\n";
-                        $data_table .="<td>$temps[$j]</td>\n";
-                        $data_table .="<td>$humis[$j]</td>\n";
+                        $data_table .="<td>$datetimes[$i]</td>\n";
+                        $data_table .="<td>$lights[$i]</td>\n";
+                        $data_table .="<td>$volumes[$i]</td>\n";
+                        $data_table .="<td>$temps[$i]</td>\n";
+                        $data_table .="<td>$humis[$i]</td>\n";
                     $data_table .= "</tr>\n";
                 }
                 echo "{$data_table}";
