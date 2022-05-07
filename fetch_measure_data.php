@@ -75,9 +75,22 @@
         //切断を閉じる
         $sth = null;
         $dbh = null;
-
         ?>
 
-        <a href='index.html'>初期ページ</a>
+        <table width="80%" border="1">
+            <tr>
+                <th scope="col">時間</th>
+                <th scope="col">照度</th>
+                <th scope="col">気温</th>
+                <th scope="col">湿度</th>
+            </tr>
+            <tr>
+                <td><?php print(htmlspecialchars($result['datetime'])); ?> </td>
+                <td><?php print(htmlspecialchars($result['light'])); ?> </td>
+                <td><?php print(htmlspecialchars($result['temp'])); ?> </td>
+                <td><?php print(htmlspecialchars($result['humi'])); ?> </td>
+            </tr>
+            
+            <a href='index.html'>初期ページ</a>
     </body>
 </html>
