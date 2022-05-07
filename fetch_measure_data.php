@@ -52,6 +52,24 @@
         print_r($lights);
         print_r($temps);
         print_r($humis);
+
+        $kari = (1,2;)
+
+        //データを表で表示
+        $data_table = "<table>\n";
+            $data_table .= "<thead>\n";
+                $data_table .= "<tr>\n";
+                    $data_table .= "<th count( $kari )>データ一覧</th>\n";
+                $data_table .= "</tr>\n";
+            $data_table .= "</thead>\n";
+            $data_table .= "<tbody>\n";
+                $data_table .= "<tr>\n";
+                    $data_table .= "<td>aa</td>\n";
+                    $data_table .= "<td>bb</td>\n";
+                $data_table .= "</tr>\n";
+            $data_table .= "</tbody>\n";
+        $data_table = "</table>\n";
+
         //切断を閉じる
         $sth = null;
         $dbh = null;
