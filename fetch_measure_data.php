@@ -54,7 +54,7 @@
                 $temps = array_column($result, 'temp');
                 $humis = array_column($result, 'humi');
 
-                $data_table .= "<tr>\n";
+                $data_table = "<tr>\n";
                     $data_table .= "<td>print(htmlspecialchars($datetimes));></td>\n";
                     $data_table .= "<td>print(htmlspecialchars($lights));></td>\n";
                     $data_table .= "<td>print(htmlspecialchars($temps));></td>\n";
