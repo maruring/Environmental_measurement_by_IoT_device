@@ -29,8 +29,8 @@
             $device_names = array_column($device_names, 'device_name');
 
             //inputタグの作成
-            $sampleDatalist = "<input type=\"text\" name=\"device_name\" autocomplete=\"on\" list=\"device_names\">\n"; 
-            $sampleDatalist .= "<datalist id=\"device_names\">\n";
+            $device_name_list = "<input type="text" name="device_name" autocomplete="on" list="device_names">\n"; 
+            $device_name_list .= "<datalist id="device_names">\n";
             for ( $i = 0; $i < count( $device_names ); $i++ ) {
                 $device_name_list .= "\t<option value=\"{$device_names[$i]}\">{$device_names[$i]}</option>\n";
             }
