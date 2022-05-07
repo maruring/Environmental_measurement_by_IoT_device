@@ -26,7 +26,8 @@
             $sql = "SELECT device_name FROM device_info";
             $sth = $dbh -> query($sql);
             $device_names = $sth -> fetchAll(PDO::FETCH_ASSOC);
-            
+            $device_names = array_column($device_names, 'device_name');
+
             print_r($device_names);
 
             //inputタグの作成
