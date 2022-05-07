@@ -54,9 +54,9 @@
                 $temps = array_column($result, 'temp');
                 $humis = array_column($result, 'humi');
 
-                for( $i = 0; $i < count( $datetimes ); $i++ ){
+                for( $i = 0; $i < 4; $i++ ){
                     $data_table = "<tr>\n";
-                        for( $j = 0; $j < 4; $j++ ){
+                        for( $j = 0; $j count( $datetimes ); $j++ ){
                             $data_table .="<td>$datetimes[$j]</td>\n";
                             $data_table .="<td>$lights[$j]</td>\n";
                             $data_table .="<td>$temps[$j]</td>\n";
