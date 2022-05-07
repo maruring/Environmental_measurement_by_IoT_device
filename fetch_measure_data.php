@@ -73,6 +73,7 @@
                 $dbh = null;
                 ?>
                 </table>
+            <a href='reference_page.php'>データ参照ページ</a>
             <a href='index.html'>初期ページ</a>
     </body>
 </html>

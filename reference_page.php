@@ -39,7 +39,7 @@
             ?>
             <input type='submit' value='送信'>
         </form>
-
+        
         <a href='index.html'>初期ページ</a>
     </body>
 </html>
