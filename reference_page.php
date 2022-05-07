@@ -35,11 +35,8 @@
                 $device_name_list .= "\t<option value=\"{$device_names[$i]}\">{$device_names[$i]}</option>\n";
             }
             $device_name_list .= "</datalist>\n";
-            
+            echo "{$device_name_list}";
             ?>
-
-
-
             <input type='submit' value='送信'>
         </form>
 
