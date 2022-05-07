@@ -76,10 +76,10 @@
                 $dbh = null;
                 ?>
             <tr>
-                <td><?php print(htmlspecialchars($result['datetime'])); ?></td>
-                <td><?php print(htmlspecialchars($result['light'])); ?></td>
-                <td><?php print(htmlspecialchars($result['temp'])); ?></td>
-                <td><?php print(htmlspecialchars($result['humi'])); ?></td>
+                <td><?php print(htmlspecialchars($datetimes)); ?></td>
+                <td><?php print(htmlspecialchars($lights)); ?></td>
+                <td><?php print(htmlspecialchars($temps)); ?></td>
+                <td><?php print(htmlspecialchars($humis)); ?></td>
             </tr>
             
             <a href='index.html'>初期ページ</a>
