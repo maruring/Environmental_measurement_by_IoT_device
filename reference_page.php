@@ -17,13 +17,13 @@
             //データベースと接続
             try {
                 $dbh = new PDO($dsn, $user, $password);
-                echo 'DBに接続成功\n';
+                // echo 'DBに接続成功\n';
             } catch (PDOException $e) {
                 echo '接続失敗: ' . $e -> getMessage() . '\n';
                 exit();
             }
 
-            $sql = 'SELECT device_name FROM device_info';
+            $sql = "SELECT device_name FROM device_info";
             $sth = $dbh -> query($sql);
             $device_names = $sth -> fetchAll(PDO::FETCH_ASSOC);
             
