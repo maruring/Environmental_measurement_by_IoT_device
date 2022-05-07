@@ -27,7 +27,7 @@
             $sth = $dbh -> query($sql);
             $device_names = $sth -> fetchAll(PDO::FETCH_ASSOC);
             
-            echo $device_names;
+            print_r($device_names);
 
             //inputタグの作成
             $sampleDatalist = '<input type=\'text\' name=\'device_name\' autocomplete=\'on\' list=\'device_names\'>\n'; 
