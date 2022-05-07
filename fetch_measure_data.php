@@ -21,9 +21,10 @@ try {
 $sql = "SELECT device_id FROM device_info WHERE device_name=:device_name";
 $sth = $dbh -> prepare($sql);
 $sth -> bindValue(':device_name', $device_name);
-$sth->execute();
-$sth = $dbh -> query($sql);
+$sth -> execute();
+//$sth = $dbh -> query($sql);
 $device_id = $sth->fetch(PDO::FETCH_ASSOC);
+print_r($device_id);
 
 // device_idから測定データを取得
 $sql = null;
