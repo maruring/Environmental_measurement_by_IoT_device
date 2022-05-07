@@ -24,6 +24,7 @@ $sth -> bindValue(':device_name', $device_name);
 $sth -> execute();
 //$sth = $dbh -> query($sql);
 $device_id = $sth->fetch(PDO::FETCH_ASSOC);
+$device_id = $device_id['device_id'];
 print_r($device_id);
 
 // device_idから測定データを取得
