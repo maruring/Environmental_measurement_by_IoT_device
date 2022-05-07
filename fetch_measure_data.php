@@ -8,12 +8,14 @@
         <h2><?php echo htmlspecialchars($_GET['device_name']); ?>のデータ</h2>
 
         <table width="80%" border="1">
-            <tr>
-                <th scope="col">時間</th>
-                <th scope="col">照度</th>
-                <th scope="col">気温</th>
-                <th scope="col">湿度</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th scope="col">時間</th>
+                    <th scope="col">照度</th>
+                    <th scope="col">気温</th>
+                    <th scope="col">湿度</th>
+                </tr>
+            </thead>
             <?php
                 //接続するデータベースの設定
                 $dsn = 'mysql:dbname=iotdata;host=192.168.2.117';
@@ -54,7 +56,8 @@
                 $temps = array_column($result, 'temp');
                 $humis = array_column($result, 'humi');
 
-                for( $i = 0; $i < 4; $i++ ){
+                $data_table = "<tbody>\n";
+                for( $i = 0; $i <= 3; $i++ ){
                     $data_table .= "<tr>\n";
                         for( $j = 0; $j < count( $datetimes ); $j++ ){
                             $data_table .="<td>$datetimes[$j]</td>\n";
@@ -64,6 +67,7 @@
                         }
                     $data_table .= "</tr>\n";
                 }
+                $data_table = "</tbody>\n";
 
                 echo "{$data_table}";
 
