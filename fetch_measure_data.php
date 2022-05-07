@@ -64,6 +64,7 @@
                 $data_table .= "</tr>\n";
 
                 echo "{$data_table}";
+                </table>
 
                 //切断を閉じる
                 $sth = null;
