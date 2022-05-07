@@ -53,7 +53,7 @@
         print_r($temps);
         print_r($humis);
 
-        $kari = (1,2;)
+        $kari = (1,2);
 
         //データを表で表示
         $data_table = "<table>\n";
