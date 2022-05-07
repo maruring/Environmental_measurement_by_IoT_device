@@ -17,7 +17,7 @@ try {
 }
 
 
-// mysqlに保存されているdevice_id一覧を取得
+// mysqlに保存されているdevice_idとdevice_nameを一覧を取得
 $sql = "SELECT * FROM device_info";
 $sth = $dbh -> query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
