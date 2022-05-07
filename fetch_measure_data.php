@@ -64,12 +64,12 @@
                 $data_table .= "</tr>\n";
 
                 echo "{$data_table}";
-                </table>
 
                 //切断を閉じる
                 $sth = null;
                 $dbh = null;
-                ?>            
+                ?>
+                </table>
             <a href='index.html'>初期ページ</a>
     </body>
 </html>
