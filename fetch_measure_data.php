@@ -36,8 +36,6 @@ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 echo $result;
 
 
-
-
 //切断を閉じる
 $sth = null;
 $dbh = null;
