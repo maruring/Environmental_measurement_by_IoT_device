@@ -54,16 +54,28 @@
                 $temps = array_column($result, 'temp');
                 $humis = array_column($result, 'humi');
 
-                $data_table = "<tr>\n";
-                    for( $j = 0; $j < count( $datetimes ); $j++ ){
-                        $data_table .="<td>$datetimes[$j]</td>\n";
-                        $data_table .="<td>$lights[$j]</td>\n";
-                        $data_table .="<td>$temps[$j]</td>\n";
-                        $data_table .="<td>$humis[$j]</td>\n";
-                }
-                $data_table .= "</tr>\n";
+                // $data_table = "<tr>\n";
+                //     for( $j = 0; $j < count( $datetimes ); $j++ ){
+                //         $data_table .="<td>$datetimes[$j]</td>\n";
+                //         $data_table .="<td>$lights[$j]</td>\n";
+                //         $data_table .="<td>$temps[$j]</td>\n";
+                //         $data_table .="<td>$humis[$j]</td>\n";
+                // }
+                // $data_table .= "</tr>\n";
 
-                echo "{$data_table}";
+                // echo "{$data_table}";
+
+                foreach ($result[0] as $key => $val){
+                    if (is_numeric($key)){
+                        for($j=0;$j<count($result);$j++){
+                            echo "<td>". $result[$j][$key] ."</td>\n";
+                        }
+                        echo "</tr>\n";
+                    }else{
+                        echo "<tr>\n";
+                        echo "<td>" .$key. "</td>\n";
+                    }
+                }
 
                 //切断を閉じる
                 $sth = null;
