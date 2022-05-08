@@ -1,16 +1,21 @@
 #include <rpcWiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
+#include <Wire.h>
+#include "SHT31.h"
+#include <SPI.h>
 
 const char* ssid = "elecom2g-7ed19d";
 const char* password =  "9363850601459";
 const char* postURL = "http://192.168.2.117:80/recive_data.php";
-const int device_id = 1111;
+const int device_id = 461343;
 
 float volume;
 float light;
 float temp;
 float humi;
+
+SHT31 sht31 = SHT31();
 
 StaticJsonDocument<JSON_OBJECT_SIZE(6)> data;
 char json_string[255];
@@ -39,6 +44,14 @@ void setup() {
     Serial.println("WiFi connected");
     Serial.println("IP address: ");
     Serial.println(WiFi.localIP());
+
+    //光センサ
+    pinMode(WIO_LIGHT, INPUT);
+    //マイク
+    pinMode(WIO_MIC, INPUT);
+    //室温度計セットアップ
+    sht31.begin();
+    
 }
 
 void loop() {
@@ -84,25 +97,25 @@ void loop() {
     }else{
     Serial.println("Error in WiFi connection");
   }
-  delay(5000);
+  delay(60000);
 }
 
 float get_volume(){
-  float volume = 10.5;
+  float MIC = analogRead(WIO_MIC);
   return volume;
 }
 
 float get_light(){
-  float light = 105.215;
+  float light = analogRead(WIO_LIGHT);
   return light;
 }
 
 float get_temp(){
-  float temp = 285.4;
+  float temp = sht31.getTemperature();
   return temp;
 }
 
 float get_humi(){
-  float humi = 54.6;
+  float humi = sht31.getHumidity();
   return humi;
 }
