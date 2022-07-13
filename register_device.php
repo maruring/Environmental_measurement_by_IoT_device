@@ -1,8 +1,8 @@
 <?php
 //接続するデータベースの設定
-$dsn = 'mysql:dbname=iotdata;host=192.168.2.117';
-$user = 'maru3745';
-$password = 'maruring';
+$dsn = 'mysql:dbname=iotdata;host=XXX.XXX.X.XXX';
+$user = 'XXX';
+$password = 'XXXXXX';
 
 
 $device_name = $_POST['device_name'];
