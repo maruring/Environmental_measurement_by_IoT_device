@@ -10,9 +10,9 @@
             <label for="device_name">デバイス名を入力</label>
             <?php
             //接続するデータベースの設定
-            $dsn = 'mysql:dbname=iotdata;host=192.168.2.117';
-            $user = 'maru3745';
-            $password = 'maruring';
+            $dsn = 'mysql:dbname=iotdata;host=XXX.XXX.X.XXX';
+            $user = 'XXXXXXX';
+            $password = 'XXXXXXXX';
 
             //データベースと接続
             try {
