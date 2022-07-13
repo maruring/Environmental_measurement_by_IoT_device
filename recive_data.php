@@ -4,9 +4,9 @@ $json_string = file_get_contents('php://input');
 $data = json_decode(stripslashes($json_string),true);
 
 //接続するデータベースの設定
-$dsn = 'mysql:dbname=iotdata;host=192.168.2.117';
-$user = 'maru3745';
-$password = 'maruring';
+$dsn = 'mysql:dbname=iotdata;host=XXX.XXX.X.XXX';
+$user = 'XXXXXXX';
+$password = 'XXXXXXXX';
 
 
 //送られてきたデータを取り出す
