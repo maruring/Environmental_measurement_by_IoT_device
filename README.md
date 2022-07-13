@@ -3,7 +3,16 @@
 - 温湿度などを測定して
 - 測定データをWebで閲覧できる
 
-# ハードウェア
+## ハードウェア
 - [wioterminal](https://wiki.seeedstudio.com/jp/Wio-Terminal-Getting-Started/)
-- []
-nginx, php, , mysql, wioterminalを使用してwioterminalのデータをmysqlに保存
+- [Raspberry Pi4 Model B 4G](https://jp.rs-online.com/web/generalDisplay.html?id=raspberrypi)
+
+##ミドルウェア
+- Nginx
+- MySQL
+
+##言語
+- PHP(サーバーサイド)
+- arduino(IoT機器)
+
+##システム構成
