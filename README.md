@@ -7,12 +7,12 @@
 - [wioterminal](https://wiki.seeedstudio.com/jp/Wio-Terminal-Getting-Started/)
 - [Raspberry Pi4 Model B 4G](https://jp.rs-online.com/web/generalDisplay.html?id=raspberrypi)
 
-##ミドルウェア
+## ミドルウェア
 - Nginx
 - MySQL
 
-##言語
+## 言語
 - PHP(サーバーサイド)
 - arduino(IoT機器)
 
-##システム構成
+## システム構成
