@@ -5,7 +5,7 @@
 
 ## ハードウェア
 - [wioterminal](https://wiki.seeedstudio.com/jp/Wio-Terminal-Getting-Started/)
-- [Raspberry Pi4 Model B 4G](https://jp.rs-online.com/web/generalDisplay.html?id=raspberrypi)
+- [Raspberry Pi4 Model B 4G](https://jp.rs-online.com/web/generalDisplay.html?id=raspberrypi)*サーバーとして利用
 
 ## ミドルウェア
 - Nginx
@@ -16,3 +16,5 @@
 - arduino(IoT機器)
 
 ## システム構成
+![システム構成](https://user-images.githubusercontent.com/58333988/178969371-31838f12-45a0-4f1a-8131-a9d023888e46.PNG)
+
