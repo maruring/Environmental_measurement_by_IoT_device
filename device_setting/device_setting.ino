@@ -5,10 +5,10 @@
 #include "SHT31.h"
 #include <SPI.h>
 
-const char* ssid = "elecom2g-7ed19d";
-const char* password =  "9363850601459";
-const char* postURL = "http://192.168.2.117:80/recive_data.php";
-const int device_id = 461343;
+const char* ssid = "SSID";
+const char* password =  "Password";
+const char* postURL = "http://XXX.XXX.X.XXX:80/recive_data.php";
+const int device_id = YYYY;
 
 float volume;
 float light;
